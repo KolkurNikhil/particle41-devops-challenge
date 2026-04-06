@@ -13,10 +13,27 @@ spec:
         app: simple-time
     spec:
       containers:
-      - name: app
+      - name: simple-time-container
         image: knikhil999/simple-time-service
         ports:
         - containerPort: 5000
+
+        # Resource management (best practice)
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "200m"
+            memory: "256Mi"
+
+        # Health check (important for production)
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 10
 
 ---
 apiVersion: v1
