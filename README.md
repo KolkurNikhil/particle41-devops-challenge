@@ -57,6 +57,7 @@ kubectl apply -f microservice.yml
 ### Verify
 
 kubectl get pods
+
 kubectl get svc
 
 
