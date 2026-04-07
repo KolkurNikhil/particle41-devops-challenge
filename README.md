@@ -4,6 +4,7 @@ This repository contains my solution for the DevOps challenge, covering:
 
 * Task 1: SimpleTimeService (Application + Docker + Kubernetes)
 * Task 2: AWS Infrastructure using Terraform (EKS)
+* Branch => Master
 
 ---
 
