@@ -111,7 +111,7 @@ I used Terraform to create AWS infrastructure including:
 * Terraform installed
 
 
-## 🔐 Configure AWS
+## Configure AWS
 
 aws configure
 
