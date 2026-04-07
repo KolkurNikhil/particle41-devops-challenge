@@ -15,10 +15,11 @@ spec:
       containers:
       - name: simple-time-container
         image: knikhil999/simple-time-service
+        imagePullPolicy: Always
+
         ports:
         - containerPort: 5000
 
-        # Resource management (best practice)
         resources:
           requests:
             cpu: "100m"
@@ -27,13 +28,19 @@ spec:
             cpu: "200m"
             memory: "256Mi"
 
-        # Health check (important for production)
         livenessProbe:
           httpGet:
             path: /
             port: 5000
           initialDelaySeconds: 5
           periodSeconds: 10
+
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 5000
+          initialDelaySeconds: 3
+          periodSeconds: 5
 
 ---
 apiVersion: v1
