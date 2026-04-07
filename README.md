@@ -51,6 +51,7 @@ docker pull knikhil999/simple-time-service:latest
 
 ### Deploy
 cd app
+
 kubectl apply -f microservice.yml
 
 ### Verify
