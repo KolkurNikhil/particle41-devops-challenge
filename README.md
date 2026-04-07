@@ -82,6 +82,7 @@ I used Terraform to create AWS infrastructure including:
 * Subnets (public + private)
 * EKS cluster
 * Node group
+* Required IAM Permissions
 
 ---
 
