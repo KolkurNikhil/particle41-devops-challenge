@@ -79,7 +79,7 @@ Builds Docker image
 
 Pushes image to DockerHub
 
-Workflow File Location
+Workflow File
 
 .github/workflows/docker-publish.yml
 
@@ -111,7 +111,7 @@ Then check:
 
 GitHub → Actions tab
 
-
+---
 ##  Notes
 
 * Deployment and Service are defined in a single YAML file
