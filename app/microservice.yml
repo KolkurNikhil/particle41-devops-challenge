@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: simple-time-container
-        image: knikhil999/simple-time-service
+        image: knikhil999/simple-time-service:latest
         imagePullPolicy: Always
 
         ports:
