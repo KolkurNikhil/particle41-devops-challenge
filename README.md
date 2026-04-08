@@ -67,40 +67,57 @@ kubectl port-forward svc/simple-time-service 8080:80
 
 curl http://localhost:8080
 
+---
+## CICD
+
+
+This project includes a CI/CD pipeline using GitHub Actions.
+
+Automatically triggers on push to master branch
+
+Builds Docker image
+
+Pushes image to DockerHub
+
+Workflow File Location
+
+.github/workflows/docker-publish.yml
+
+Required Secrets
+
+To enable Docker push, configure the following in GitHub:
+
+DOCKER_USERNAME
+
+DOCKER_PASSWORD
+
+How to Add Secrets
+
+Go to Repository → Settings
+
+Secrets and variables → Actions
+
+Add the above secrets
+
+How to Trigger
+
+git add .
+
+git commit -m "trigger pipeline"
+
+git push origin master
+
+Then check:
+
+GitHub → Actions tab
+
+
 ##  Notes
 
 * Deployment and Service are defined in a single YAML file
 * Service type is **ClusterIP** (as required)
 * Works with a single command: `kubectl apply -f microservice.yml`
 * Container runs as non-root user
-CI/CD (GitHub Actions)
-
-This project includes a CI/CD pipeline using GitHub Actions.
-
-Automatically triggers on push to master branch
-Builds Docker image
-Pushes image to DockerHub
-Workflow File Location
-.github/workflows/docker-publish.yml
-Required Secrets
-
-To enable Docker push, configure the following in GitHub:
-
-DOCKER_USERNAME
-DOCKER_PASSWORD
-How to Add Secrets
-Go to Repository → Settings
-Secrets and variables → Actions
-Add the above secrets
-
-How to Trigger
-git add .
-git commit -m "trigger pipeline"
-git push origin master
-
-Then check:
-👉 GitHub → Actions tab
-
 
 #  Task 2 – Terraform (AWS EKS)
 
