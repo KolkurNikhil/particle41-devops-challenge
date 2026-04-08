@@ -2,7 +2,7 @@
 
 This repository contains my solution for the DevOps challenge, covering:
 
-* Task 1: SimpleTimeService (Application + Docker + Kubernetes)
+* Task 1: SimpleTimeService (Application + Docker + Kubernetes+CICD(GitHub Actions)
 * Task 2: AWS Infrastructure using Terraform (EKS)
 * Branch => Master
 
@@ -167,7 +167,7 @@ Provide:
 
 * Access key
 * Secret key
-* Region → `ap-south-1`
+* Region → ap-south-1
 
 ---
 
@@ -175,7 +175,9 @@ Provide:
 cd terraform
 
 terraform init
+
 terraform plan
+
 terraform apply
 
 ##  What Gets Created
@@ -205,13 +207,13 @@ Using AWS Console:
 
 * No credentials are stored in the repository
 * Terraform uses local state for simplicity
-* Setup is designed so anyone can run `terraform apply` directly
+* Setup is designed so anyone can run terraform apply directly
 
 ---
 
 #  Summary
 
-* Task 1: Built and deployed a containerized microservice on Kubernetes
+* Task 1: Built and deployed a containerized microservice on Kubernetes along with CICD
 * Task 2: Provisioned AWS infrastructure using Terraform
 * Both tasks are tested and reproducible using standard commands
 
