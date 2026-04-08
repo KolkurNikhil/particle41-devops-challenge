@@ -91,13 +91,6 @@ DOCKER_USERNAME
 
 DOCKER_PASSWORD
 
-How to Add Secrets
-
-Go to Repository → Settings
-
-Secrets and variables → Actions
-
-Add the above secrets
 
 How to Trigger
 
